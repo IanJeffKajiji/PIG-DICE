@@ -8,7 +8,6 @@ This is web program is a pig dice game
 * $ git clone https://github.com/IanJeffKajiji/pig-dice.git
 * This will clone the repo
 ## BDD
----------------------|----------------------|
   Behaviour          |   Outcome            |
 ---------------------|----------------------|
   enter player names | appends on game      |
