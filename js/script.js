@@ -27,7 +27,7 @@ player.prototype.rollone = function() {
  player.prototype.tally = function () {
    this.total += this.interimscore
  }
- // check first player reaching 1000
+ // check first player reaching 100
  player.prototype.checkwinner = function () {
    if(this.total >= 100) {
      alert("kudos "  + this.playerName + "you made a million bucks");
@@ -57,4 +57,20 @@ player.prototype.rollone = function() {
 
       event.preventDefault();
     });
+
+
+    $("button#newgame").click(function(event){
+     clearValues();
+     player1.newGame();
+     player2.newGame();
+     $("#die-roll-1").empty();
+     $("#sum-1").empty();
+     $("#total-1").empty();
+     $("#die-roll-2").empty();
+     $("#sum-2").empty();
+     $("#total-2").empty();
+   });
+   $("button$first man-roll").click(function(event){
+     first man-roll = tossDice();
+   }
 });
