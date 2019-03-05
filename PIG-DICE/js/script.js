@@ -23,6 +23,17 @@ player.prototype.rollone = function() {
     this.interimscore += this.roll;
   }
 }
+  //tally rolls to allow next player
+  player.prototype.tally = function (){
+    this.total += this.interimscore
+    this.interimscore
+  }
+   //check first player reaching 100
+   player.prototype.checkwinnner = function (){
+     if(this.total >= 100) {
+       alert("Kudos" + this,playerName + "you made a million bucks")
+     }
+   }
 
   // user interface
   $(document).ready(function() {
@@ -35,5 +46,31 @@ player.prototype.rollone = function() {
       $("#story").show();
 
       event.preventDefault();
+    });
+    $("button#first man-roll").click(function(event){
+      player1.toss = tossDice();
+      $("#die=roll-1").text(player1.toss);
+      player1.rollone();
+      $("#sum-1").text(player1.interimscore);
+    });
+    $("button#last man-roll").click(function(event){
+      player1.toss = tossDice();
+      $("#die=roll-2").text(player2.toss);
+      player2.rollone();
+      $("#sum-2").text(player2.interimscore);
+    });
+    $("button#first man-tally").click(function(event){
+      player1.tally();
+      $("#total-1").text(player1.total);
+      $("#sum-1").empty();
+      $("#die-roll-1").empty();
+      player1.checkwinner();
+    });
+    $("button#last man-tally").click(function(event){
+      player2.tally();
+      $("#total-2").text(player1.total);
+      $("#sum-2").empty();
+      $("#die-roll-2").empty();
+      player1.checkwinner();
     });
 });
