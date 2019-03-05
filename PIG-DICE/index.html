@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PIG DICE</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+    <h2>Welcome ya'll</h2>
+    <h3>let's have some fun</h3>
+    <br>
+    <h1>PIG DICE</h1>
+    <h4>Fill in player details below</h4>
+    <form>
+
+      <div id ="info1">
+      <div class="row">
+      <div class="form-group">
+      <div class="col-md-6">
+        <label>First man</label>
+        <br>
+        <input id="player1" class="form-control" type="text">
+      </div>
+      <div class="col-md-6">
+        <label>Last man</label>
+        <br>
+        <input id="player2" class="form control" type="text">
+      </div>
+      <br>
+      </div>
+      </div>
+    </form>
+      <form id="gameplan">
+        <div class="form-group">
+      <button id="start" class="btn btn-info">PLAY</button>
+      <br>
+      <div class="story">
+      <div class= "row">
+        <div class="col-md-4">
+          <p>First man: <span class= "player1"></span></p>
+            <button id="first man-roll" class="btn btn-warning">Toss</button>
+            <button id="first man-roll" class="btn btn-warning">Tally</button>
+          <br>
+          <p>DIE ROLL: <span id ="die-roll-1"></span></p>
+          <p>ROLL SUM: <span id ="sum-1"></span></p>
+          <p>Total Score: <span id="total-1"><span></p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://media0.giphy.com/media/5T0klia2LqiIPM87lt/200w.webp?cid=3640f6095c7e31984f37445851f13552">
+        </div>
+        <div class="col-md-4">
+          <p>Last man: <span class= "player2"></span></p>
+            <button id="last man-roll" class="btn btn-warning">Toss</button>
+            <button id="last man-roll" class="btn btn-warning">Tally</button>
+          <br>
+          <p>DIE ROLL: <span id ="die-roll-2"></span></p>
+          <p>ROLL SUM: <span id ="sum-2"></span></p>
+          <p>Total Score: <span id="total-2"><span></p>
+            </div>
+        </div>
+        <br>
+        <br>
+          <button id ="newgame" class="btn btn-warning">NEW GAME</button>
+      </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
