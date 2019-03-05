@@ -1,9 +1,60 @@
-$(document).ready(function() {
-  $("#info form").submit(function(event) {
-    var player1Input1 = ("input#player1").val();
-    $(".player1").append(player1Input);
-    $("#story").show();
+ // business logic
 
-    event.preventDefault();
-  });
+  var player1 ="";
+  var player2 ="";
+  var tossDice = function() {
+    return math.floor(6*math.random())+1;
+  }
+   //creating a constructor
+ function player(turn) {
+   this.toss = 0;
+   this.interimscore = 0;
+   this.total = 0;
+   this.turn =turn;
+   this.playername;
+ }
+   //roll 1
+player.prototype.rollone = function() {
+  if(this.toss === 1) {
+    this.interimscore = 0;
+    alert(this.playerName + "you rolled 1!...haha you out")
+  }
+  else {
+    this.interimscore += this.roll;
+  }
+}
+ //tally Total
+ player.prototype.tally = function () {
+   this.total += this.interimscore
+ }
+ // check first player reaching 1000
+ player.prototype.checkwinner = function () {
+   if(this.total >= 100) {
+     alert("kudos "  + this.playerName + "you made a million bucks");
+
+   }
+ }
+  //refresh the game
+  player.prototype.newGame = function () {
+    this.toss = 0;
+    this.interimscore = 0;
+    this.total = 0;
+    this.playerName = "";
+  }
+  var clearValues = function() {
+    $("player1").val("");
+    $("player2").val("");
+  }
+  // user interface
+  $(document).ready(function() {
+    $("#info1 form").submit(function(event) {
+      var player1Input = $("input#player1").val();
+      var player2Input = $("input#player2").val();
+      $(".player1").text(player1Input);
+      $(".player2").text(player2Input);
+
+      $("#story").show();
+
+      event.preventDefault();
+    });
 });

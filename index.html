@@ -15,7 +15,9 @@
     <br>
     <h1>PIG DICE</h1>
     <h4>Fill in player details below</h4>
-      <form id ="info1">
+    <form>
+
+      <div id ="info1">
       <div class="row">
       <div class="form-group">
       <div class="col-md-6">
@@ -23,22 +25,20 @@
         <br>
         <input id="player1" class="form-control" type="text">
       </div>
-      </form>
-      <form id ="info2">
       <div class="col-md-6">
         <label>Last man</label>
         <br>
         <input id="player2" class="form control" type="text">
       </div>
       <br>
-      <button type="submit" class="btn btn-info">Save</button>
-      <div id="story">
-        <p>Get ready Mr/Mrs <span class="player1"></span> for fun against Mr/Mrs <span class="player2"> .When ready press the play button below</span>
       </div>
-      </form>
+      </div>
+    </form>
       <form id="gameplan">
+        <div class="form-group">
       <button id="start" class="btn btn-info">PLAY</button>
       <br>
+      <div class="story">
       <div class= "row">
         <div class="col-md-4">
           <p>First man: <span class= "player1"></span></p>
@@ -53,17 +53,19 @@
           <img src="https://media0.giphy.com/media/5T0klia2LqiIPM87lt/200w.webp?cid=3640f6095c7e31984f37445851f13552">
         </div>
         <div class="col-md-4">
-          <p>First man: <span class= "player2"></span></p>
+          <p>Last man: <span class= "player2"></span></p>
             <button id="last man-roll" class="btn btn-warning">Toss</button>
             <button id="last man-roll" class="btn btn-warning">Tally</button>
           <br>
           <p>DIE ROLL: <span id ="die-roll-2"></span></p>
           <p>ROLL SUM: <span id ="sum-2"></span></p>
           <p>Total Score: <span id="total-2"><span></p>
+            </div>
         </div>
         <br>
         <br>
           <button id ="newgame" class="btn btn-warning">NEW GAME</button>
+      </div>
       </div>
     </form>
     </div>
